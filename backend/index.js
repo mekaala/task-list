@@ -1,9 +1,9 @@
 import express from 'express';
 import serverless from 'serverless-http';
 import cors from 'cors';
-import { fetchTasks, createTask, updateTask, deleteTask } from './task';
+import { fetchTasks, createTask, updateTask, deleteTask } from './task.js';
 
-const app = express()
+const app = express();
 const port = 3001;
 
 app.use(express.json());
@@ -13,13 +13,13 @@ if (process.env.DEVELOPMENT) {
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!');
 })
 
 app.get('/task', async (req, res) => {
     try {
         const tasks = await fetchTasks();
-        res.send(tasks.items);
+        res.send(tasks.Items);
     } catch(err) {
         res.status(400).send(`Error fetching tasks: ${err}`);
     }

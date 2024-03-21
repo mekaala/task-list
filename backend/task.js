@@ -19,7 +19,7 @@ export const fetchTasks = async () => {
     return response;
 }
 
-export const createTask = async ({name, completed}) => {
+export const createTask = async ({ name, completed }) => {
     const uuid = crypto.randomUUID()
     const command = new PutCommand({
         TableName: "Tasks",
@@ -34,7 +34,7 @@ export const createTask = async ({name, completed}) => {
     return response;
 }
 
-export const updateTask = async ({id, name, completed}) => {
+export const updateTask = async ({ id, name, completed }) => {
     const command = new UpdateCommand({
         TableName: "Tasks",
         Key: {
