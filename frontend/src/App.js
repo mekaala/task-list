@@ -31,15 +31,13 @@ function App() {
   
 
   return (
-    <div className="App">
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <AddTaskForm fetchTasks={fetchTasks}/>
-      {tasks.map((task) => {
+      <AddTaskForm fetchTasks={fetchTasks} />
+      {tasks.map((task) => { return (
         <Task task={task} key={task.id} fetchTasks={fetchTasks} />
-      })}
+      )})}
     </ThemeProvider>
-    </div>
   );
 }
 
