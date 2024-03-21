@@ -46,7 +46,7 @@ export const Task = ({ task, fetchTasks }) => {
             <Button variant="contained" onClick={() => setIsDialogOpen(true)}>
                 <EditIcon/>
             </Button>
-            <Button color="error" variant="contained" onClick={() => handleDeleteTask}>
+            <Button color="error" variant="contained" onClick={handleDeleteTask}>
                 <DeleteIcon/>
             </Button>
         </div>

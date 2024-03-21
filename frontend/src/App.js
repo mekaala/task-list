@@ -29,7 +29,6 @@ function App() {
     fetchTasks();
   }, [])
   
-
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
